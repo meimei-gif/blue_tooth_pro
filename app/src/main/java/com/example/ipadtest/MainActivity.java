@@ -6,8 +6,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.concurrent.BlockingDeque;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn =(Button) findViewById(R.id.btn);
         btn.setOnClickListener(this);
         replaceFragment(new RightFragment());
+        Log.e("mei", "onCreate: ");
     }
 
     @Override
